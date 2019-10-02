@@ -76,3 +76,17 @@ guessLetter('T'); // "You Win, G O A T"
 - Keep track of all the guessed letters (right and wrong) and only let the user guess a letter once. If they guess a letter twice, do nothing.
 - Keep track of the state of the hangman as a number (starting at 0), and subtract or add to that number every time they make a wrong guess.
 - Once the number reaches 6 (a reasonable number of body parts for a hangman), inform the user that they lost and show a hangman on the log.
+
+---
+
+## Reminder
+Your opinion for this homework is very important! Please fill up the following questions when you pull request:
+ * on a scale from 1 to 5, how comfortable were you with this assignment?
+ * How long did it take?
+ * What was a challenge you had with this assignment?
+ * Is there anything that you'd like some further information on?
+ * Do you have any suggestions to improve this assignment?
+
+## Homework Submission
+https://github.com/SEI2-jeddah/General/tree/master/homework_submission
+
