@@ -11,8 +11,8 @@
   <br>
     <code > summationEven(5) // should return 6 because 2+4=6</code>
   </li>
-    
-  <li>Create a function to get the average of a group of numbers 
+
+  <li>Create a function to get the average of a group of numbers
   <br>
     <code> avg([8, 2, 2, 4]) // should return 4</code>
   </li>
@@ -79,6 +79,157 @@ guessLetter('T'); // "You Win, G O A T"
 
 ---
 
+Answers will be  here :
+
+// 1
+
+function summation(n) {
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    sum += i;
+
+  }
+
+  console.log("1");
+  return console.log(sum);
+}
+summation(5);
+summation(10);
+
+
+//2
+function summationEven(num){
+    let sum=0;
+    for(let i=1;i<=num;i++){
+        if(!(i%2)){
+        sum+=i;}
+    }
+    return sum;
+}
+
+console.log(summationEven(5));
+//3
+function avg(arr){
+    let result=0;
+    for(let i=0;i<arr.length;i++){
+        result+=arr[i];
+    }
+    return result=result/arr.length;
+}
+
+console.log(avg([8, 2, 2, 4]));
+
+//4
+function reverse(word){
+let reversedWord="";
+for(i=word.length-1;i>=0;i--){
+    reversedWord+= word[i]
+}
+return reversedWord
+}
+
+console.log(reverse("caterpillar"));
+
+//5
+function addDashes(arr){
+    return arr.join('-');
+ }
+
+ console.log(addDashes(['test1', 'test2', 'test3']));
+
+//6
+function countUpAndDown(num){
+    let count=""
+    for(let i=1;i<=num;i++){
+        count+=i+" "
+    }
+    for(let i=num-1;i>0;i--){
+        count+=i+" "
+    }
+    return count
+ }
+
+ console.log(countUpAndDown(3));
+// 7
+
+function wordsWithA(arr){
+     newArr=[];
+     for(let i=0;i<arr.length;i++){
+         arr[i]=arr[i].toLowerCase();
+        for(let j=0;j<arr[i].length;j++){
+            if(arr[i][j]=="a"){
+                newArr.push(arr[i]);
+            }
+        }
+    }
+    return newArr;
+ }
+
+ console.log(wordsWithA(['cat', 'rabbit', 'dog', 'frog']));
+//8
+ function wordsWithLetter(letter,arr){
+    newArr=[];
+    for(let i=0;i<arr.length;i++){
+        arr[i]=arr[i].toLowerCase();
+       for(let j=0;j<arr[i].length;j++){
+           if(arr[i][j]==letter){
+               newArr.push(arr[i]);
+           }
+       }
+   }
+   return newArr;
+}
+
+console.log(wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog']));
+//9
+function longestWord(sentence){
+    sentence=sentence.split(" ");
+    let longest=sentence[0];
+    for(let i=0;i<sentence.length;i++){
+        if(sentence[i].length>longest.length){
+            longest=sentence[i];
+        }
+    }
+    return longest;
+}
+console.log(longestWord("The cat in the house"));
+// 10 
+function largestEvenNumber(arr){
+    let largest=Number.NEGATIVE_INFINITY;
+    for(let i=0;i<arr.length;i++){
+        if(!(arr[i]%2)&&arr[i]>largest){
+            largest=arr[i];
+        }
+    }
+    return largest;
+}
+
+console.log(largestEvenNumber([1,2,3,10,4,7,0]));
+// Extra
+const wordLetters = ["G", "O", "A", "T"];
+var guessedLetters = ["_", "_", "_", "_"];
+function guessLetter(letter) {
+
+  if (wordLetters.includes(letter)) {
+    guessedLetters.splice(wordLetters.indexOf(letter),1,letter);
+
+    console.log(guessedLetters);
+  } else {
+
+
+    console.log("Wrong");
+  }
+
+
+}
+
+guessLetter('G'); // "Correct, G _ _ _"
+guessLetter('I'); // "Incorrect, G _ _ _"
+guessLetter('O'); // "Correct, G O _ _"
+guessLetter('A'); // "Correct, G O A _"
+guessLetter('L'); // "Incorrect, G O A _"
+guessLetter('T'); // "You Win, G O A T"
+
 ## Reminder
 Your opinion for this homework is very important! Please fill up the following questions when you pull request:
  * on a scale from 1 to 5, how comfortable were you with this assignment?
@@ -89,4 +240,3 @@ Your opinion for this homework is very important! Please fill up the following q
 
 ## Homework Submission
 https://github.com/SEI2-jeddah/General/tree/master/homework_submission
-
