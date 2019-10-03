@@ -20,7 +20,7 @@ function summationEven(x) {
 
 //Q3- Create a function to get the average of a group of numbers
 function avg(arr){
-    let result = 0
+    var result = 0
     for(i in arr){
       result += arr[i];
     }
@@ -30,12 +30,12 @@ function avg(arr){
 
 //Q4- Create a function to reverse the letters in a word
 function reverse(arr){
-    let toReturn = new Array(arr.length-1);
+    var rev = new Array(arr.length-1);
     for(let i = 0; i < arr.length/2; ++i){
-      toReturn[arr.length-i] = arr[i];
-      toReturn[i] = arr[arr.length-i];
+      rev[arr.length-i] = arr[i];
+      rev[i] = arr[arr.length-i];
     }
-    return toReturn.join("");
+    return rev.join("");
   }
   console.log(reverse("caterpillar")) // should return "rallipretac"
 
@@ -47,44 +47,44 @@ function addDashes(arr){
 
 //Q6- Function that will count up to a number and back down and return a string of the climb
 function countUpAndDown(x){
-    let toReturn = [];
-    for(let i = 0; i < x; ++i){
-      toReturn.push(i+1);
+    var ret = [];
+    for(var i = 0; i < x; ++i){
+      ret.push(i+1);
     }
-    for(let i = x-1; i > 0; --i){
-        toReturn.push(i);
+    for(var i = x-1; i > 0; --i){
+      ret.push(i);
     }
-    return toReturn.join(" ");
+    return ret.join(" ");
   }
   console.log(countUpAndDown(3)) // should return "1 2 3 2 1"
 
 //Q7- Write a function that will tell you all of the words in an array that contain the letter `a`
 function wordsWithA(arr){
-    let toReturn = []
+    var retu = []
     for(i in arr){
       if(arr[i].indexOf('a') !== -1){
-        toReturn.push(arr[i]);
+        retu.push(arr[i]);
       }
     }
-    return toReturn 
+    return retu 
   }
   console.log(wordsWithA(['cat', 'rabbit', 'dog', 'frog'])) // should return ['cat', 'rabbit']
 
 //Q8- Write a function that will tell you all of the words in an array that contain a specified letter
 function wordsWithLetter(letter, arr){
-    let toReturn = []
+    var reeturn = []
     for(i in arr){
       if(arr[i].indexOf(letter) !== -1){
-        toReturn.push(arr[i]);
+        reeturn.push(arr[i]);
       }
     }
-    return toReturn 
+    return reeturn
   }
   console.log(wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog'])) // should return ['dog', 'frog']
 
 //Q9- Function that returns the longest word in sentence
 function longestWord(arr) {
-    let longest = "";
+    var longest = "";
     arr = arr.split(" ");
     for(i in arr){
       if(longest.length < arr[i].length){
@@ -97,11 +97,11 @@ function longestWord(arr) {
 
 //Q10- Function that returns the largest even number
 function largestEvenNumber(arr){
-    let maxEven = 0;
+    let max = 0;
     for(i in arr){
-      let evenValue = !(arr[i] % 2) ? arr[i] : maxEven
-      maxEven = maxEven < evenValue ? evenValue : maxEven 
+      let even = !(arr[i] % 2) ? arr[i] : max
+      max = max < even ? even : max 
     }
-    return maxEven
+    return max
   }
   console.log(largestEvenNumber([1,2,3,10,4,7,0])) // should return "10"
