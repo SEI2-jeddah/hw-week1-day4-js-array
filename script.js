@@ -137,11 +137,12 @@ var guessLetter = function(letter){
                     return console.log("You Win, G O A T"+"\n");
                 }
                 else{
-                    return console.log("Correct:  ["+guessedLetters+"]"+"\n");
+                  return console.log("Correct:  ["+guessedLetters+"]"+"\n");
                 }    
                      
             }else{
-                return console.log("Incorrect:  ["+guessedLetters+"] try again\nNumber of try: "+(6-lost)+"\n");    
+              lost += 1
+              return console.log("Incorrect:  ["+guessedLetters+"] try again\nNumber of try: "+(6-lost)+"\n");    
             }
         }            
     }
