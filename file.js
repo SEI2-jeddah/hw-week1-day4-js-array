@@ -100,14 +100,17 @@ console.log(longestWord)
 }
 longest9("The cat in  the house")
 
+
+
 function max_even10(N) {
 
     N.sort((x, y) => y - x);
   
     for (var i = 0; i < N.length; i++) {
       if (N[i] % 2 == 0)
-        return N[i];
+       var S = N[0]
       }
+    console.log(S)
     }
-  
-  console.log(max_even([1,2,3,10,4,7,0]));
+
+    max_even10([1,5,3,6,88,9,6,43,8])
